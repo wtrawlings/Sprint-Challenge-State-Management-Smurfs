@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
 class App extends Component {
+  
+  state = [{
+
+  }]
   componentDidMount() {
     axios.get('http://localhost:3333/smurfs')
       .then(response => {
