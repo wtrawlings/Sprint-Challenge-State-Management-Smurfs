@@ -9,10 +9,10 @@ class App extends Component {
   componentDidMount() {
     axios.get('http://localhost:3333/smurfs')
       .then(response => {
-        console.log(response);
+        console.log(response)
         this.setState({smurfs: response.data})
       })
-      .catch(console.log("error"));
+      .catch(console.log("error"))
   };
 
   render() {
