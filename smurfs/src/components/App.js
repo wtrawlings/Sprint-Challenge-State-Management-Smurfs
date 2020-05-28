@@ -48,6 +48,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
+    smurfs: state.smurfs
     /**takes in state and returns an object like  */
     /**inside the object should be an array fo smurfs */
     // name: state.smurf.name,
@@ -59,3 +60,5 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, {})(App);
+//calling a function twice in this way with two sets of 
+//parenthesis is called function currying

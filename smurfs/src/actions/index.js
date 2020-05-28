@@ -13,13 +13,13 @@ export const getSmurfControl = () => {
     return dispatch => {
         dispatch({type: GET_SMURF});
         promise
-            .then(res => {
-                console.log(res);
+            .then(response => {
+                console.log(response);
                 dispatch({type: GET_SMURF_SUCCESS, payload: response.data});
             })
-            .catch(err => {
-                console.log(err);
-                dispatch({type: GET_SMURF_ERROR, payload: err});
+            .catch(error => {
+                console.log(error);
+                dispatch({type: GET_SMURF_ERROR, payload: error});
             });
     };
 };
@@ -33,13 +33,13 @@ export const postSmurfControl = () => {
     return dispatch => {
         dispatch({type: POST_SMURF});
         promise
-            .then(res => {
-                console.log(res);
+            .then(response => {
+                console.log(response);
                 dispatch({type: POST_SMURF_SUCCESS, payload: newSmurf});
             })
-            .catch(err => {
-                console.log(err);
-                dispatch({type: POST_SMURF_ERROR, payload: err});
+            .catch(error => {
+                console.log(error);
+                dispatch({type: POST_SMURF_ERROR, payload: error});
             });
     }
 }

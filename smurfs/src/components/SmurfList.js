@@ -41,6 +41,7 @@ class SmurfList extends React.Component {
 
 const mapStateToProps = state => {
     return{
+        smurfs: state.smurfs
         /**returns an object of state */
     }
 }

@@ -25,8 +25,12 @@ const SmurfForm = () => {
     )
 }
 const mapStateToProps = state => {
-    return{
-        /**returns an object of state */
+    return {
+        newSmurf:  state.newSmurf
+        /**returns an object of state 
+         * state +  newSmurf? if that is done here, how do I get this done in Reducer?
+         * Or how do I get this over to reducer to get it done there?
+        */
     }
 }
 
