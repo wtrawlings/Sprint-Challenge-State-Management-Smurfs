@@ -11,7 +11,7 @@ const SmurfList = () => {
        
         return (
             <div className = "smurfListing">
-               {smurfs.map(smurf => {
+               {smurfs.map((smurf) => {
                    return (<SmurfPerson smurf={smurf} />)
                })}
             </div>
