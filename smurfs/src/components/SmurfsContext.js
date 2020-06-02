@@ -12,14 +12,15 @@ export const SmurfsProvider = (props) => {
           axios.get('http://localhost:3333/smurfs')
               .then(response => {
                 // console.log(response.data);
-                setSmurfs({ smurfs: response.data});
+                setSmurfs(response.data);
                 console.log(smurfs);
               })
               .catch(err => {
                   console.log ({ err })
               })
-      });
+      }, []);
 
+      
 
     return (
         <SmurfsContext.Provider value={[smurfs, setSmurfs]}>
