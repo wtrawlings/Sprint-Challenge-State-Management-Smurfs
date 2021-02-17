@@ -1,0 +1,37 @@
+import React from 'react'
+import { useForm } from 'react-hook-form';
+import { connect } from 'react-redux';
+
+
+
+const SmurfForm = () => {
+
+    const {register, handleSubmit} = useForm();
+    const onSubmit = (newSmurf) => {
+        //event.preventDefault();
+        console.log(newSmurf);
+        //now how do I add this to the SMURFS state?
+    }
+
+    return (
+        <div className="SmurfForm">
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <input type="text" placeholder="Smurfy Name" name="name" ref={register} />
+                <input type="text" placeholder="Smurfy Age" name="age" ref={register}/>
+                <input type="text" placeholder="Smurfy Height" name="height" ref={register} />
+                <button type="submit">Add a Smurf to the Villiage</button>
+            </form>
+        </div>
+    )
+}
+const mapStateToProps = state => {
+    return {
+        newSmurf:  state.newSmurf
+        /**returns an object of state 
+         * state +  newSmurf? if that is done here, how do I get this done in Reducer?
+         * Or how do I get this over to reducer to get it done there?
+        */
+    }
+}
+
+export default connect(mapStateToProps, {})(SmurfForm);
